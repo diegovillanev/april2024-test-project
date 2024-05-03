@@ -15,16 +15,19 @@ fi
 
 ## We are gonna use this var a lot, so let's make a constant
 LARAVEL_SRC_FOLDER="$PWD/src"
+DB_FOLDER="$PWD/mysql"
 
 ## If the user is root, use the compose file that uses the root php Dockerfile
 case $(id -u) \
 in
 	0)
+		find "${DB_FOLDER:?}" -mindepth 1 -delete && \
 		${docker_compose_cmd} --file docker-compose-root.yml up --detach --build app && \
 		find "${LARAVEL_SRC_FOLDER:?}" -mindepth 1 -delete && \
 		bash -c "cd ./src && ${docker_compose_cmd} run --rm composer create-project laravel/laravel ."
 	;;
 	*)
+		find "${DB_FOLDER:?}" -mindepth 1 -delete && \
 		${docker_compose_cmd} --file docker-compose.yml up --detach --build app && \
 		find "${LARAVEL_SRC_FOLDER:?}" -mindepth 1 -delete && \
 		bash -c "cd ./src && ${docker_compose_cmd} run --rm composer create-project laravel/laravel ."
