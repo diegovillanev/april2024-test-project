@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name:  Ask a question 💬
+    url:   https://github.com/diegovillanev/april2024-test-project/discussions/new?category=q-a
+    about: Let us know if you're stuck or unsure about something.
+  - name:  Tell your idea 💭
+    url:   https://github.com/diegovillanev/april2024-test-project/discussions/new?category=ideas
+    about: Suggest a new feature, idea, enhancement or program improvements.
+  - name:  Is your issue not here? 🔎
+    url:   https://github.com/diegovillanev/april2024-test-project/discussions/new
+    about: If the available categories don't match with your issue, take a look into Discussions or feel free to suggest another category.

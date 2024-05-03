@@ -1,0 +1,68 @@
+#
+# $(cmt) template
+#
+
+########## The input parts #####################################################
+{
+	"Type" = [
+		"mod",
+		"edit",
+		"blob",
+		"tree",
+		"fix",
+		"style",
+		"refactor",
+		"feat",
+		"docs",
+		"test",
+		"build",
+		"devops/ci/cd",
+		"devops",
+		"ci",
+		"cd",
+		"notice",
+		"chore"
+		"revert",
+	]
+	# "Ticket" = @
+	# "Scope" = @   ## Single line input
+	"Subject" = @
+	# "Meta" = @
+	"Body" = !@     ## Multi-line input
+	# "Footer" = !@
+}
+################################################################################
+
+
+########## Predefined messages (Optional) ######################################
+## When describing the subject line, use these sentences below as a guide:
+## * "After this commit, the application will    <your_subject_line_here>"
+## *   “After this commit, the code/file will    <your_subject_line_here>”
+## *            "If applied, this commit will    <your_subject_line_here>"
+{
+	  initialVCS = "initial: add essential files for a VCS repository #first-commit"
+		 initial = "initial: add essential files for a source code repository #first-commit"
+	  inicialVCS = "inicial: añadir archivos esenciales para un repositorio VCS #first-commit"
+		 inicial = "inicial: añadir archivos esenciales para un repositorio de codigo fuente #first-commit"
+		firstVCS = "first: add essential files for a VCS repository"
+		   first = "first: add essential files for a source code repository"
+	  firstVCSes = "first: añadir archivos esenciales para un repositorio VCS"
+		 firstES = "first: añadir archivos esenciales para un repositorio de codigo fuente"
+	essentialVCS = "blob: add essential files for a VCS repository"
+	   essential = "blob: add essential files for a source code repository"
+	 esencialVCS = "blob: añadir archivos esenciales para un repositorio VCS"
+		esencial = "blob: añadir archivos esenciales para un repositorio de codigo fuente"
+	vb = "chore: bump version"
+	bdv = "chore: bump de version"
+	readme = "docs: update README.md"
+	readme = "docs: actualizar README.md"
+}
+################################################################################
+
+
+########## The output format ###################################################
+## Takes the values provided from the input stage and interpolates them in
+
+${Type}${Subject}
+
+${Body}
