@@ -1,3 +1,7 @@
+
+src/*
+mysql/*
+
 ################################################################################
 ######### https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
 
