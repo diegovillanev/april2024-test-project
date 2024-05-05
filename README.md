@@ -25,3 +25,7 @@ The way the services are designed allows us to use Composer, Artisan, and NPM co
 If it is necessary to modify the scripts or files and have to bring up the project again, you only need to use:
 
 `docker compose down && ./install.sh`
+
+## Proof of concept
+
+![](img.png)

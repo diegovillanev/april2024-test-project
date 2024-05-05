@@ -7,9 +7,9 @@ Requisitos:
   * Una VM recién levantada con Docker instalado
   * Permisos de ejecución en el script `install.sh` (Ya debería tenerlos).
 
-Para empezar los servicios, hay que ejecutar el script de la siguiente forma: `./install.sh`. El script detectará 
-automáticamente cuales archivos docker compose y Dockerfiles debe ejecutar dependiendo del usuario que los está ejecutando, 
-para después crear el proyecto dummy de Laravel, levantar la BD y hacer modificaciones al proyecto para poder hacer la 
+Para empezar los servicios, hay que ejecutar el script de la siguiente forma: `./install.sh`. El script detectará
+automáticamente cuales archivos docker compose y Dockerfiles debe ejecutar dependiendo del usuario que los está ejecutando,
+para después crear el proyecto dummy de Laravel, levantar la BD y hacer modificaciones al proyecto para poder hacer la
 conexión y traer un registro.
 
 El orden de ejecución del script es el siguiente:
@@ -20,10 +20,14 @@ El orden de ejecución del script es el siguiente:
 
 La forma en la que está diseñada el uso de lo servicios nos permite usar los comandos de Composer, Artisan y NPM sin tenerlos instalados en local. Si es necesario utilizar, se puede correr efímeramente mediante:
 
-  * docker-compose run --rm composer ...
-  * docker-compose run --rm npm ...
-  * docker-compose run --rm artisan ...
+  * `docker-compose run --rm composer ...`
+  * `docker-compose run --rm npm ...`
+  * `docker-compose run --rm artisan ...`
 
 Si es es necesario modificar los scripts o archivos y tener que volver a levantar el proyecto, tan sólo hay que usar:
 
 `docker compose down && ./install.sh`
+
+## Prueba de concepto
+
+![](img.png)
